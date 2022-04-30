@@ -27,7 +27,12 @@ prideti.addEventListener("click", function(e){
 
 delFirst.addEventListener("click", function(e){
     e.preventDefault()
-    var row = table.deleteRow (1)
+    var rows = table.rows.length
+    if(rows > 1) {
+       var row = table.deleteRow (1)
+    } else {
+        alert("Nėra ką trinti!")
+    }
 })
 
 delLast.addEventListener("click", function(e){
